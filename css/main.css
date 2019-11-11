@@ -10,7 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
-  font: normal 100%/1.3 sans serif;
+  font: normal 100%/1.3 "sans serif";
 }
 
 *, *::before, *::after {
@@ -25,7 +25,9 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-
+  padding-top: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 img {
@@ -36,36 +38,40 @@ img {
 .dino:nth-child(2), .dino:nth-child(4) {
 
   display: none;
-
 }
 
 @media only screen and (min-width: 25em) {
 
-.dino:nth-child(2), .dino:nth-child(4) {
-  display: flex;
-}
+  .dino:nth-child(2), .dino:nth-child(4) {
+    display: block;
+  }
+
   .dino {
-  width: 50%;
-}
+    width: 50%;
+  }
 
 }
 
 @media only screen and (min-width: 38em) {
 
-.dino:first-child {
-  display: none;
+  .dino:first-child {
+    display: none;
+  }
+
+  .dino {
+    width: 33.333%;
+  }
+
 }
 
-.dino {
-  width: 33.333%
-}
+@media only screen and (min-width: 60em) {
 
-}
+  .dino:first-child {
+    display: block;
+  }
 
-@media only screen and (min-width:60em) {
-
-.dino:first-child {
-  display: flex;
-}
+  .dino {
+    width: 25%;
+  }
 
 }

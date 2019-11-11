@@ -20,3 +20,52 @@ html {
 body {
   margin: 0;
 }
+
+.dino-wrap {
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.dino:nth-child(2), .dino:nth-child(4) {
+
+  display: none;
+
+}
+
+@media only screen and (min-width: 25em) {
+
+.dino:nth-child(2), .dino:nth-child(4) {
+  display: flex;
+}
+  .dino {
+  width: 50%;
+}
+
+}
+
+@media only screen and (min-width: 38em) {
+
+.dino:first-child {
+  display: none;
+}
+
+.dino {
+  width: 33.333%
+}
+
+}
+
+@media only screen and (min-width:60em) {
+
+.dino:first-child {
+  display: flex;
+}
+
+}
